@@ -15,6 +15,7 @@ from rest_framework.response import Response
 def hello_world(request):
     if request.method == 'GET':
         return Response({'msg':'This is get request'})
+
     if request.method == 'POST':
         print(request.data)
-        return Response({'msg':'This is post request'})
+        return Response({'msg':'This is post request', 'data':request.data})
