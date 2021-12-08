@@ -12,6 +12,7 @@ class StudentAPI(APIView):
             stu = Student.objects.get(pk=id)
             Serializer = StudentSerializer(stu)
             return Response(Serializer.data)
+            
         stu = Student.objects.all()
         serializer = StudentSerializer(stu, many=True)
         return Response(serializer.data)
