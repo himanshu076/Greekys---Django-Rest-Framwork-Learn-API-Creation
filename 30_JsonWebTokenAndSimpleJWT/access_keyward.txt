@@ -1,0 +1,17 @@
+## Using "httpie" we can create, delete & update object in terminal also can access, refresh & verify the token.
+
+1. To access the api vai JWT authentication -
+    http POST http://127.0.0.1:8000/studentapi/ 'Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5MTEzMTg3LCJpYXQiOjE2NTkxMTAxNjAsImp0aSI6IjUyYzI1ODgzNjUxMzQ4YTM5NzE5ZmMxODNhMzc3ZTJlIiwidXNlcl9pZCI6MX0.ugnnRF29Hz-VauXAvdGB2YuLjp4Jg0CcqrzrGXGcvBk'
+
+2. Refresh Token use to generate the new access token
+    http://127.0.0.1:8000/refreshtoken/ refresh="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1OTE5NjU2MCwiaWF0IjoxNjU5MTEwMTYwLCJqdGkiOiJiYWY4ZjE5OWI4NWM0YjMzOWJjNDJlNjUxYTUyMDhjZCIsInVzZXJfaWQiOjF9.kFNTLtyq_Ulx0iraqgHt_UcieZV1WhDI8Hk9HnWtSuY"
+
+ 3. To generated acces & refresh token
+    http POST http://127.0.0.1:8000/gettoken/ username="superuser" password="superuser"
+
+4. To verify the token is valid
+    http POST http://127.0.0.1:8000/verifytoken/ token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5MTEwNzYwLCJpYXQiOjE2NTkxMTAxNjAsImp0aSI6IjExMWRjZjJlYmE5YzQxNmJhODhkZjNjODJkODhhNjQyIiwidXNlcl9pZCI6MX0._Jf4rbAvRJ9KQwa1Sa1IiAKTTGPKLc8S28_1gEA6mOg"
+
+5. To Create the new object vai httpie
+    http -f POST http://127.0.0.1:8000/studentapi/ name=Raj roll=202 city=Bokaro "Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5MTE1NjM4LCJpYXQiOjE2NTkxMTAxNjAsImp0aSI6ImNiYTRhNTFkYTcwYjQ1NWZhNTEzY2YxYWMxMTE0MGZkIiwidXNlcl9pZCI6MX0.K_HtwdOuJeayUPL6YQvuDbQPvBGlFPj91eTMeJ-kRVk"
+
