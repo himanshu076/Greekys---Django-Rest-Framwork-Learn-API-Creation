@@ -5,6 +5,7 @@ colorama==0.4.5
 commonmark==0.9.1
 defusedxml==0.7.1
 Django==4.0.3
+django-filter==22.1
 djangorestframework==3.13.1
 djangorestframework-simplejwt==5.2.0
 httpie==3.2.1
